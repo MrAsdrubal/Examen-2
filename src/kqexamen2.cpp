@@ -13,40 +13,15 @@ const string KQCEDULA= "0503867723";
 const string KQNOMBRE_COMPLETO="Kevin Asdrubal Quishpe Yanchaliquin ";
 using namespace std;
 
-struct kqcoordenada{
+struct kqcoordenada{ //definicion de structura tipo coordenada que tiene 3 datos y 2 punteros.
     int capacidad;
     string geolocalizacion;
     string arsenal;
-    struct corrdenada *izq,*der;
+    struct kqcoordenada *izq,*der;
 };
+typedef struct kqcoordenada *ARB;
 
-// void kqlectura(string archivo)
-// {
-//     string s;
-//     ifstream f(archivo);
-//     if (!f.is_open())// si el archivo se abre is_open es una funcion discreta que significa abrir el archivo.
-//     cout<<"Error en la apertura del archivo."<<endl;
-//     else
-//     cout<<"Leyendo coordenadas"<<endl;
-//     do
-//     {
-//         int k=1; //Dato de tipo booleano validar el bucle while del porcentaje de carga.
-//         bool first=false;
-//         getline(f,s);
-//         while(k!=0)
-//         {
-//         for (int i = 0; i <= 100; i++){
-//             cout<<"\r"<<i<<WHITE<<"%";
-//             Sleep(25);
-//         }
-//         k=0;
-//         }
-//         cout<<" "<<GREEN<<s<<endl;
-    
-//     } while (!f.eof());
-//     f.close();
-// }
-void kqlectura(string archivo) //Lee el archivo y carga los datos del archivo excepto la primera linea.
+void kqlectura(string archivo) //Lee el archivo y carga los datos archivo de texto
 {
     string s;
     ifstream f(archivo);
@@ -76,15 +51,17 @@ void kqlectura(string archivo) //Lee el archivo y carga los datos del archivo ex
 
 int main()
 {
+   ABB arbol =NULL;
+
    kqlectura("include\\ciudades.txt");
+
+   //Muestra el panel de información.
    cout<<CYAN<<"\n\n[+] Informacion de arbol binario de capacidad belica Ucrania"<<LBLUE<<endl;
    cout<<" Developer-Nombre : "<<WHITE<<KQNOMBRE_COMPLETO<<LBLUE<<endl;;
    cout<<" Developer-Cedula : "<<WHITE<<KQCEDULA<<LBLUE<<endl;;
    cout<<" Capacidad belica : "<<WHITE<<"29"<<LBLUE<<endl;
    cout<<" Coordenada-Total :"<<WHITE<<"6"<<LBLUE<<endl;
    cout<<" Coordenada-Seccarga :"<<WHITE<<" 3, 7, 6, 8, 0, 5"<<LBLUE<<endl;
-
-
 
     return 0;
 
