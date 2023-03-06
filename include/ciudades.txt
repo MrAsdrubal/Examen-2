@@ -1,7 +1,11 @@
-Quito-240000
-Guayaquil-350000
-Cuenca-603269
-Babahoyo-153776 
-Quevedo-173575
-Loja-214855
-Otavalo-39354
+Cap, Geo, Tipo Arsenal
+3, GPS3, bcd
+2, GPS2, ac
+7, GPS7, aaabbct
+7, GPS7, aaabbct
+6, GPS6, act
+8, GPS8, abbccdt
+3, GPS3, bcd
+0, GPS0, ab
+5, GPS5, bct
+0, GPS0, ab
